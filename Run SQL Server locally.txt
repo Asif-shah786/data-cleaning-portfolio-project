@@ -1,0 +1,9 @@
+docker run -e ACCEPT_EULA=Y -e MSSQL_SA_PASSWORD=YourStrongPassword123! -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2022-latest
+
+docker ps -a          
+
+docker start sqlserver
+
+Copying data file into docker contianer 
+docker cp "/Users/asif/Develop/data-science/Data Cleaning Portfolio Project/Nashville Housing Data for Data Cleaning.csv" sqlserver:/var/opt/mssql/data/nashville.csv
+
